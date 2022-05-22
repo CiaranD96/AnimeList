@@ -33,7 +33,7 @@ export default function Anime() {
             />
           </div>
           <div className='single-anime-desc'>
-            <h1 className='single-anime-title'>{anime.data.title}</h1>
+            <h1 className='single-anime-title'>{anime.data.title_english}</h1>
             <p>{anime.data.synopsis}</p>
           </div>
         </div>

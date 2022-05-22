@@ -32,7 +32,7 @@ export default function TopAnime() {
                   className='anime-card-image'
                 />
                 <div className='anime-card-desc'>
-                  <p className='anime-card-title'>{anime.title}</p>
+                  <p className='anime-card-title'>{anime.title_english}</p>
                   <p>{anime.studios[0].name}</p>
                   <p>
                     {anime.type} {anime.episodes}
