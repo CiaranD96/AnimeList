@@ -1,23 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Navbar from './components/navbar/Navbar';
+import Home from './components/pages/home/Home';
+import TopAnime from './components/pages/top-anime/TopAnime';
+import SeasonalAnime from './components/pages/seasonal-anime/SeasonalAnime';
+import Anime from './components/pages/anime/Anime';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <Router>
+        <Navbar />
+
+        <main className='main-layout'>
+          <Routes>
+            <Route path='/' element={<Home />}></Route>
+            <Route path='/top' element={<TopAnime />}></Route>
+            <Route path='/seasonal' element={<SeasonalAnime />}></Route>
+            <Route path='/anime/:id' element={<Anime />}></Route>
+          </Routes>
+        </main>
+      </Router>
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: $bg-secondary;
+
+  .navbar-nav {
+    display: flex;
+    width: 100%;
+    list-style: none;
+    padding: 1rem;
+
+    .nav-link {
+      font-size: 1.2rem;
+      color: $text-primary;
+      margin-right: 1.5rem;
+      text-decoration: none;
+      &:hover {
+        color: $hover-primary;
+      }
+    }
+  }
+}

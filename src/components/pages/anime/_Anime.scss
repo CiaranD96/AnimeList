@@ -1,0 +1,19 @@
+.single-anime {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  margin-top: 2rem;
+  height: 100%;
+  width: 90%;
+  .anime-image {
+    border-radius: 5px;
+  }
+  .single-anime-desc {
+    margin-left: 1rem;
+    width: 80%;
+  }
+  .single-anime-title {
+    color: $hover-primary;
+    margin: 0;
+  }
+}
