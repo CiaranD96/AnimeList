@@ -9,10 +9,9 @@ export default function AnimeCard({
   type,
   episodes,
   aired,
-  index,
 }) {
   return (
-    <div key={index} className='anime-card'>
+    <div className='anime-card'>
       <NavLink exact='true' to={`/anime/${id}`}>
         <img src={image} alt='anime card' className='anime-card-image' />
         <div className='anime-card-desc'>
