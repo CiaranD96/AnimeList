@@ -5,6 +5,7 @@
 @import './components/pages/top-anime/TopAnime';
 @import './components/pages/seasonal-anime/SeasonalAnime';
 @import './components/pages/anime/Anime';
+@import './components/anime-card/AnimeCard';
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
@@ -28,35 +29,4 @@ body {
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
-  .anime-card {
-    background-color: $bg-secondary;
-    border-radius: 5px;
-    width: 260px;
-    height: 420px;
-    margin: 10px;
-    a {
-      text-decoration: none;
-      color: $text-primary;
-    }
-  }
-  .anime-card-image {
-    height: 320px;
-    width: 260px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-  }
-  .anime-card-desc {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    width: 100%;
-    p {
-      padding: 0;
-      margin: 0;
-    }
-  }
-  .anime-card-title {
-    color: $hover-primary;
-  }
 }
