@@ -1,22 +1,27 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-export default function AnimeCard({ anime, index }) {
+export default function AnimeCard({
+  image,
+  id,
+  title,
+  studio,
+  type,
+  episodes,
+  aired,
+  index,
+}) {
   return (
     <div key={index} className='anime-card'>
-      <NavLink exact='true' to={`/anime/${anime.mal_id}`}>
-        <img
-          src={anime.images.webp.image_url}
-          alt='anime card'
-          className='anime-card-image'
-        />
+      <NavLink exact='true' to={`/anime/${id}`}>
+        <img src={image} alt='anime card' className='anime-card-image' />
         <div className='anime-card-desc'>
-          <p className='anime-card-title'>{anime.title}</p>
-          <p>{anime.studios[0].name}</p>
+          <p className='anime-card-title'>{title}</p>
+          <p>{studio}</p>
           <p>
-            {anime.type} - {anime.episodes} episodes
+            {type} - {episodes} episodes
           </p>
-          <p>{anime.aired.string}</p>
+          <p>{aired}</p>
         </div>
       </NavLink>
     </div>

@@ -24,7 +24,16 @@ export default function TopAnime() {
       <div className='anime-grid'>
         {topAnimeList.data &&
           topAnimeList.data.map((anime, index) => (
-            <AnimeCard anime={anime} index={index} />
+            <AnimeCard
+              image={anime.images.webp.image_url}
+              id={anime.mal_id}
+              title={anime.title}
+              studio={anime.studios[0].name}
+              type={anime.type}
+              episodes={anime.episodes}
+              aired={anime.aired.string}
+              index={index}
+            />
           ))}
       </div>
     </Fragment>
