@@ -2,12 +2,27 @@
   background-color: $bg-secondary;
   border-radius: 5px;
   width: 260px;
-  height: 420px;
+  height: 470px;
   margin: 10px;
   a {
     text-decoration: none;
     color: $text-primary;
   }
+}
+.anime-card-rank-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: $bg-secondary;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  text-align: center;
+  width: 30px;
+  height: 40px;
+}
+.anime-card-rank {
+  color: $hover-primary;
 }
 .anime-card-image {
   height: 320px;

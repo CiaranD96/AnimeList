@@ -26,13 +26,16 @@ export default function TopAnime() {
           topAnimeList.data.map((anime, index) => (
             <AnimeCard
               key={index}
+              rank={anime.rank}
               image={anime.images.webp.image_url}
               id={anime.mal_id}
               title={anime.title}
+              score={anime.score}
               studio={anime.studios[0].name}
               type={anime.type}
               episodes={anime.episodes}
               aired={anime.aired.string}
+              duration={anime.duration}
             />
           ))}
       </div>
