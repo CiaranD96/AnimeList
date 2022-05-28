@@ -1,0 +1,34 @@
+.single-anime-image {
+  border-radius: $border-radius-5;
+  height: 600px;
+  width: 420px;
+}
+.single-anime-card-rank-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: $bg-secondary;
+  border-top-left-radius: $border-radius-5;
+  border-bottom-right-radius: $border-radius-5;
+  text-align: center;
+  width: 30px;
+  height: 40px;
+}
+.single-anime-card-rank {
+  color: $hover-primary;
+}
+.single-anime-title {
+  color: $hover-primary;
+  margin: 0;
+}
+.single-anime-score {
+  color: #fff;
+  font-size: 1rem;
+}
+.single-anime-trailer {
+  margin-top: 1rem;
+  iframe {
+    border-radius: $border-radius-5;
+  }
+}

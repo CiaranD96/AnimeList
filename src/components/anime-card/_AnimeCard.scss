@@ -1,6 +1,6 @@
 .anime-card {
   background-color: $bg-secondary;
-  border-radius: 5px;
+  border-radius: $border-radius-5;
   width: 260px;
   height: 470px;
   margin: 10px;
@@ -15,8 +15,8 @@
   align-items: center;
   position: absolute;
   background-color: $bg-secondary;
-  border-top-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-left-radius: $border-radius-5;
+  border-bottom-right-radius: $border-radius-5;
   text-align: center;
   width: 30px;
   height: 40px;
@@ -27,8 +27,8 @@
 .anime-card-image {
   height: 320px;
   width: 260px;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
+  border-top-left-radius: $border-radius-5;
+  border-top-right-radius: $border-radius-5;
 }
 .anime-card-desc {
   display: flex;

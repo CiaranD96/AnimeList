@@ -16,8 +16,6 @@ export default function TopAnime() {
     })();
   }, []);
 
-  console.log(topAnimeList);
-
   return (
     <Fragment>
       <h1 className='page-title'>Top Anime List</h1>

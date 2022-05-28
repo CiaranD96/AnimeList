@@ -1,5 +1,10 @@
 import React, { Fragment, useEffect, useState } from 'react';
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { useParams } from 'react-router-dom';
+
+import SingleAnimeMain from '../../single-anime/SingleAnimeMain';
+import SingleAnimeSection from '../../single-anime/SingleAnimeSection';
+import ReviewPage from '../../reviews/ReviewPage';
 
 export default function Anime() {
   const [anime, setAnime] = useState([]);
@@ -23,17 +28,42 @@ export default function Anime() {
     <Fragment>
       {anime.data && (
         <div className='single-anime'>
-          <div className='single-anime-image'>
-            <img
-              src={anime.data.images.webp.large_image_url}
-              alt='anime'
-              className='anime-image'
-            />
-          </div>
-          <div className='single-anime-desc'>
-            <h1 className='single-anime-title'>{anime.data.title}</h1>
-            <p>{anime.data.synopsis}</p>
-          </div>
+          <SingleAnimeSection
+            rank={anime.data.rank}
+            image={anime.data.images.webp.large_image_url}
+            studio={anime.data.studios[0].name}
+            aired={anime.data.aired.string}
+            type={anime.data.type}
+            episodes={anime.data.episodes}
+            duration={anime.data.duration}
+          />
+          <main className='single-anime-main'>
+            <h1 className='single-anime-title'>
+              {anime.data.title}{' '}
+              <span className='single-anime-score'>
+                {anime.data.score} / 10
+              </span>
+            </h1>
+            {anime.data.title_english && <h3>{anime.data.title_english}</h3>}
+            <Tabs>
+              <TabList>
+                <Tab>About Anime</Tab>
+                <Tab>Reviews</Tab>
+              </TabList>
+
+              <TabPanel>
+                <SingleAnimeMain
+                  title={anime.data.title}
+                  rating={anime.data.rating}
+                  trailer={anime.data.trailer.embed_url}
+                  synopsis={anime.data.synopsis}
+                />
+              </TabPanel>
+              <TabPanel>
+                <ReviewPage />
+              </TabPanel>
+            </Tabs>
+          </main>
         </div>
       )}
     </Fragment>
