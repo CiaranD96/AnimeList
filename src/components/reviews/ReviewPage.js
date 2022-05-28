@@ -24,8 +24,9 @@ export default function ReviewPage() {
   return (
     <div>
       {reviews.data &&
-        reviews.data.map((review) => (
+        reviews.data.map((review, index) => (
           <Reviews
+            key={index}
             date={review.date}
             episodesWatched={review.episodes_watched}
             review={review.review}

@@ -9,7 +9,7 @@ export default function SingleAnimeMain({ title, rating, trailer, synopsis }) {
           <iframe
             title={title}
             src={`${trailer}?autoplay=0`}
-            frameborder='0'
+            frameBorder='0'
             height='415'
             width='620'
           ></iframe>

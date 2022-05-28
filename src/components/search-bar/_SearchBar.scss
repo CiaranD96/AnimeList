@@ -1,0 +1,23 @@
+.search-bar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .search-bar-input {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: $border-radius-5;
+  }
+  .search-bar-button {
+    padding: 0.5rem;
+    border: 0;
+    border-radius: $border-radius-5;
+    margin-left: 0.5rem;
+    color: $hover-primary;
+    font-weight: bold;
+    &:hover {
+      background-color: $hover-primary;
+      color: #eee;
+      cursor: pointer;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import Home from './components/pages/home/Home';
 import TopAnime from './components/pages/top-anime/TopAnime';
 import SeasonalAnime from './components/pages/seasonal-anime/SeasonalAnime';
 import Anime from './components/pages/anime/Anime';
+import SearchResults from './components/pages/search-results/SearchResults';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
             <Route path='/top' element={<TopAnime />}></Route>
             <Route path='/seasonal' element={<SeasonalAnime />}></Route>
             <Route path='/anime/:id' element={<Anime />}></Route>
+            <Route path='/search-results/:name' element={<SearchResults />} />
           </Routes>
         </main>
       </Router>
