@@ -4,7 +4,8 @@ import { useParams } from 'react-router-dom';
 
 import SingleAnimeMain from '../../single-anime/SingleAnimeMain';
 import SingleAnimeSection from '../../single-anime/SingleAnimeSection';
-import ReviewPage from '../../reviews/ReviewPage';
+import ReviewPage from '../../tabs/reviews/ReviewPage';
+import EpisodesPage from '../../tabs/episodes/EpisodesPage';
 
 export default function Anime() {
   const [anime, setAnime] = useState([]);
@@ -49,6 +50,7 @@ export default function Anime() {
               <TabList>
                 <Tab>About Anime</Tab>
                 <Tab>Reviews</Tab>
+                {anime.data.type === 'TV' ? <Tab>Episodes</Tab> : ''}
               </TabList>
 
               <TabPanel>
@@ -61,6 +63,9 @@ export default function Anime() {
               </TabPanel>
               <TabPanel>
                 <ReviewPage />
+              </TabPanel>
+              <TabPanel>
+                <EpisodesPage />
               </TabPanel>
             </Tabs>
           </main>
