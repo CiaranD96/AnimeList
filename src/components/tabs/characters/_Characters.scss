@@ -1,0 +1,25 @@
+.characters-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .character-card {
+    background-color: $bg-body;
+    border-radius: $border-radius-10;
+    margin-bottom: 1rem;
+    width: 225px;
+    .character-card-image-container {
+      img {
+        height: 350px;
+        width: 225px;
+        border-top-left-radius: $border-radius-10;
+        border-top-right-radius: $border-radius-10;
+      }
+    }
+    .character-card-info-container {
+      padding: 0 0.5rem;
+    }
+    .character-card-character-name {
+      color: $hover-primary;
+    }
+  }
+}

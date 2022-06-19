@@ -24,16 +24,17 @@ export default function EpisodesPage() {
 
   return (
     <div className='episode-page'>
-      {episodes.data &&
-        episodes.data.map((episode, index) => (
-          <EpisodeCard
-            key={episode.mal_id}
-            number={index + 1}
-            title={episode.title}
-            aired={episode.aired}
-            recap={episode.recap}
-          />
-        ))}
+      {episodes.data
+        ? episodes.data.map((episode, index) => (
+            <EpisodeCard
+              key={episode.mal_id}
+              number={index + 1}
+              title={episode.title}
+              aired={episode.aired}
+              recap={episode.recap}
+            />
+          ))
+        : 'Oops, we have no episode information yet!'}
     </div>
   );
 }

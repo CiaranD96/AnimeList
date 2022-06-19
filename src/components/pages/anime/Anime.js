@@ -6,6 +6,7 @@ import SingleAnimeMain from '../../single-anime/SingleAnimeMain';
 import SingleAnimeSection from '../../single-anime/SingleAnimeSection';
 import ReviewPage from '../../tabs/reviews/ReviewPage';
 import EpisodesPage from '../../tabs/episodes/EpisodesPage';
+import CharactersPage from '../../tabs/characters/CharactersPage';
 
 export default function Anime() {
   const [anime, setAnime] = useState([]);
@@ -51,6 +52,7 @@ export default function Anime() {
                 <Tab>About Anime</Tab>
                 <Tab>Reviews</Tab>
                 {anime.data.type === 'TV' ? <Tab>Episodes</Tab> : ''}
+                <Tab>Characters</Tab>
               </TabList>
 
               <TabPanel>
@@ -66,6 +68,9 @@ export default function Anime() {
               </TabPanel>
               <TabPanel>
                 <EpisodesPage />
+              </TabPanel>
+              <TabPanel>
+                <CharactersPage />
               </TabPanel>
             </Tabs>
           </main>
