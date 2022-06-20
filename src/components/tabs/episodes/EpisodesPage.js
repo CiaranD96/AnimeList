@@ -24,6 +24,9 @@ export default function EpisodesPage() {
 
   return (
     <div className='episode-page'>
+      {episodes.data &&
+        episodes.data.length === 0 &&
+        'Oops, we have no episode information yet!'}
       {episodes.data
         ? episodes.data.map((episode, index) => (
             <EpisodeCard

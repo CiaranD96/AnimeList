@@ -55,7 +55,7 @@ export default function Anime() {
               <TabList>
                 <Tab>About Anime</Tab>
                 <Tab>Reviews</Tab>
-                {anime.data.type === 'TV' ? <Tab>Episodes</Tab> : ''}
+                <Tab>Episodes</Tab>
                 <Tab>Characters</Tab>
               </TabList>
 
