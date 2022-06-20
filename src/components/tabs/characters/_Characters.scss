@@ -5,6 +5,7 @@
   .character-card {
     background-color: $bg-body;
     border-radius: $border-radius-10;
+    box-shadow: 5px 5px 5px $shadow-dark-grey;
     margin-bottom: 1rem;
     width: 225px;
     .character-card-image-container {

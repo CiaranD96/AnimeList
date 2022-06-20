@@ -4,6 +4,7 @@
   .episode-card {
     background-color: $bg-body;
     border-radius: $border-radius-5;
+    box-shadow: 5px 5px 5px $shadow-dark-grey;
     margin: 0 0.5rem 0.5rem 0;
     padding: 0.2rem 1rem;
     p {
