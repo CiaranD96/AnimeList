@@ -33,7 +33,11 @@ export default function Anime() {
           <SingleAnimeSection
             rank={anime.data.rank}
             image={anime.data.images.webp.large_image_url}
-            studio={anime.data.studios[0].name}
+            studio={
+              anime.data.studios[0]
+                ? anime.data.studios[0].name
+                : 'Unknown studio name'
+            }
             aired={anime.data.aired.string}
             type={anime.data.type}
             episodes={anime.data.episodes}
