@@ -11,8 +11,8 @@ export default function Characters({ name, image, role, actors }) {
         <p className='character-card-character-role'>Role: {role}</p>
         <div className='character-card-voice-actors-container'>
           {actors &&
-            actors.map((actor) => (
-              <p>
+            actors.map((actor, index) => (
+              <p key={index}>
                 {actor.language}: {actor.person.name}
               </p>
             ))}
